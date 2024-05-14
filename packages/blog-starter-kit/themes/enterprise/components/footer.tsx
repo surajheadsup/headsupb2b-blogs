@@ -172,7 +172,7 @@ export const Footer = () => {
 			<div className='ll:ml-14'><Category /></div>
 			<div className='ll:ml-14'><Support /></div>
 			<div className='ll:ml-10'><Company /></div>
-			<div className='ll:ml-1 ms:col-span-2 t:col-span-4 l:col-span-1 ll:col-span-1'><FollowUs color={"white"}/></div>
+			<div className='ll:ml-1 ms:col-span-2 t:col-span-4 l:col-span-1 ll:col-span-1'><FollowUs/></div>
 		  </div>
 		  <div className='text-center pt-6'><Copyright /></div>
 		</div>
