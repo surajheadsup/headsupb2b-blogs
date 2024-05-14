@@ -761,6 +761,11 @@ export type CreateDraftInput = {
   coverImageOptions?: InputMaybe<CoverImageOptionsInput>;
   /** A flag to indicate if the comments are disabled for the resulting draft. */
   disableComments?: InputMaybe<Scalars['Boolean']['input']>;
+  /**
+   * The id of the user who owns the draft. When this field is supplied, the draft is created directly under that user's account.
+   * Only applicable for team publications.
+   */
+  draftOwner?: InputMaybe<Scalars['ObjectId']['input']>;
   /** Information about the meta tags added to the resulting draft, used for SEO purpose. */
   metaTags?: InputMaybe<MetaTagsInput>;
   /** The URL of the original article if the draft is imported from an external source. */
@@ -1568,6 +1573,8 @@ export type Mutation = {
   restorePost: RestorePostPayload;
   scheduleDraft: ScheduleDraftPayload;
   subscribeToNewsletter: SubscribeToNewsletterPayload;
+  /** Toggle allowContributorEdits flag to allow or restrict external contributors to further edit published articles. */
+  toggleAllowContributorEdits: ToggleAllowContributorEditsPayload;
   /**
    * Update the follow state for the user that is provided via id or username.
    * If the authenticated user does not follow the user, the mutation will follow the user.
@@ -1710,6 +1717,11 @@ export type MutationScheduleDraftArgs = {
 
 export type MutationSubscribeToNewsletterArgs = {
   input: SubscribeToNewsletterInput;
+};
+
+
+export type MutationToggleAllowContributorEditsArgs = {
+  input: ToggleAllowContributorEditsInput;
 };
 
 
@@ -3514,6 +3526,15 @@ export type TextSelectionSharerFeature = Feature & {
   __typename?: 'TextSelectionSharerFeature';
   /** A flag indicating if the text selection sharer feature is enabled or not. */
   isEnabled: Scalars['Boolean']['output'];
+};
+
+export type ToggleAllowContributorEditsInput = {
+  publicationId: Scalars['ID']['input'];
+};
+
+export type ToggleAllowContributorEditsPayload = {
+  __typename?: 'ToggleAllowContributorEditsPayload';
+  publication?: Maybe<Publication>;
 };
 
 /** Payload for the toggleFollowingUser mutation. */

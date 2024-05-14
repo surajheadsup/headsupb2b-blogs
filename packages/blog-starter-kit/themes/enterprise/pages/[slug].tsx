@@ -7,8 +7,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Container } from '../components/container';
 import { AppProvider } from '../components/contexts/appContext';
-import { Footer } from '../components/footer';
-import { Header } from '../components/header';
+// import { Footer } from '../components/footer';
+// import { Header } from '../components/header';
 import { Layout } from '../components/layout';
 import { MarkdownToHtml } from '../components/markdown-to-html';
 import { PostHeader } from '../components/post-header';
@@ -167,14 +167,14 @@ export default function PostOrPage(props: Props) {
 	return (
 		<AppProvider publication={publication} post={maybePost} page={maybePage}>
 			<Layout>
-				<Header />
+				{/* <Header /> */}
 				<Container className="pt-10">
 					<article className="flex flex-col items-start gap-10 pb-10">
 						{props.type === 'post' && <Post {...props} />}
 						{props.type === 'page' && <Page {...props} />}
 					</article>
 				</Container>
-				<Footer />
+				{/* <Footer /> */}
 			</Layout>
 		</AppProvider>
 	);
