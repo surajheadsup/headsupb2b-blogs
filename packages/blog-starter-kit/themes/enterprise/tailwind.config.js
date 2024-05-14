@@ -2,11 +2,16 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	content: ['./components/**/*.tsx', './pages/**/*.tsx'],
+	content: ['./components/**/*.tsx', './components/**/*.jsx', './pages/**/*.tsx'],
 	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
+				headupb2b: '#5E3F99',
+				purple: '#F4F1FA',
+				FooterIconColor: "#B2A9C661",
+				AccordColor: "#F4F4F4",
+				lightHeadsup: '#B2A9C6',
 				'accent-1': '#FAFAFA',
 				'accent-2': '#EAEAEA',
 				'accent-7': '#333',
@@ -14,34 +19,44 @@ module.exports = {
 				cyan: '#79FFE1',
 				primary: colors.blue,
 			},
+			screens: {
+				'ms': '320px',
+				'mm': '375px',
+				'ml': '425px',
+				't': '768px',
+				'l': '1024px',
+				'll': '1440px',
+				'imac': '1920px',
+				'4k': '2360px',
+			},
 			typography: () => ({
 				DEFAULT: {
-				  css: {
-					'div[data-node-type="callout"]': {
-					  display: 'flex',
-					  'justify-content': 'flex-start',
-					  'align-items': 'flex-start',
-					  'background-color': '#F8FAFC',
-					  border: '1px solid #E2E8F0',
-					  padding: ' 1rem 1.5rem',
-					  gap: '0.5rem',
-					  'border-radius': '0.5rem',
-					  margin: '1rem 0',
-					  'word-break': 'break-word',
+					css: {
+						'div[data-node-type="callout"]': {
+							display: 'flex',
+							'justify-content': 'flex-start',
+							'align-items': 'flex-start',
+							'background-color': '#F8FAFC',
+							border: '1px solid #E2E8F0',
+							padding: ' 1rem 1.5rem',
+							gap: '0.5rem',
+							'border-radius': '0.5rem',
+							margin: '1rem 0',
+							'word-break': 'break-word',
+						},
+						'div[data-node-type="callout-emoji"]': {
+							background: '#E2E8F0',
+							'border-radius': '0.5rem',
+							minWidth: '1.75rem',
+							width: '1.75rem',
+							height: '1.5rem',
+							display: 'flex',
+							'margin-top': '0.3rem',
+							'justify-content': 'center',
+							'align-items': 'center',
+							'font-size': '1rem',
+						}
 					},
-					'div[data-node-type="callout-emoji"]': {
-					  background: '#E2E8F0',
-					  'border-radius': '0.5rem',
-					  minWidth: '1.75rem',
-					  width: '1.75rem',
-					  height: '1.5rem',
-					  display: 'flex',
-					  'margin-top': '0.3rem',
-					  'justify-content': 'center',
-					  'align-items': 'center',
-					  'font-size': '1rem',
-					}
-				  },
 				}
 			}),
 			spacing: {

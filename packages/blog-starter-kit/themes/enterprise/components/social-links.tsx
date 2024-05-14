@@ -15,9 +15,9 @@ export const SocialLinks = ({ isSidebar }: { isSidebar?: boolean }) => {
 			>
 				{hasSocialLinks && (
 					<>
-						{publication.links?.twitter && (
+						
 							<a
-								href={publication.links.twitter}
+								href={"https://twitter.com/headsupb2b"}
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Find us on Twitter, external website, opens in new tab"
@@ -25,21 +25,21 @@ export const SocialLinks = ({ isSidebar }: { isSidebar?: boolean }) => {
 							>
 								<XSVG className="h-5 w-5 stroke-current" />
 							</a>
-						)}
-						{publication.links?.github && (
+						
+						
 							<a
-								href={publication.links.github}
+								href={"https://www.youtube.com/@HeadsupB2B"}
 								target="_blank"
 								rel="noopener noreferrer"
-								aria-label="Find us on Github, external website, opens in new tab"
+								aria-label="Find us on Youtube, external website, opens in new tab"
 								className="flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600"
 							>
 								<GithubSVG className="h-5 w-5 stroke-current" />
 							</a>
-						)}
-						{publication.links?.linkedin && (
+						
+						
 							<a
-								href={publication.links.linkedin}
+								href={"https://www.linkedin.com/company/headsupb2b/"}
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Find us on Linkedin, external website, opens in new tab"
@@ -47,10 +47,10 @@ export const SocialLinks = ({ isSidebar }: { isSidebar?: boolean }) => {
 							>
 								<LinkedinSVG className="h-5 w-5 stroke-current" />
 							</a>
-						)}
-						{publication.links?.hashnode && (
+					
+						
 							<a
-								href={publication.links.hashnode}
+								href="https://wa.me/+918595736388"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Find us on Hashnode, external website, opens in new tab"
@@ -58,11 +58,11 @@ export const SocialLinks = ({ isSidebar }: { isSidebar?: boolean }) => {
 							>
 								<HashnodeSVG className="h-5 w-5 stroke-current" />
 							</a>
-						)}
+						
 					</>
 				)}
 
-				<Link
+				{/* <Link
 					prefetch={false}
 					href={`/rss.xml`}
 					target="_blank"
@@ -71,7 +71,7 @@ export const SocialLinks = ({ isSidebar }: { isSidebar?: boolean }) => {
 					className="flex flex-row items-center justify-center rounded-full border border-slate-200 p-2 hover:bg-slate-100 dark:border-neutral-800 dark:hover:bg-neutral-600"
 				>
 					<RssSVG className="h-5 w-5 stroke-current" />
-				</Link>
+				</Link> */}
 			</div>
 		</>
 	);

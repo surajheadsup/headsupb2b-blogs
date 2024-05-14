@@ -758,7 +758,7 @@ input CreateDraftInput {
   The id of the user who owns the draft. When this field is supplied, the draft is created directly under that user's account.
   Only applicable for team publications.
   """
-  draftOwner: ObjectId
+  draftOwner: ID
   """
   Information about the meta tags added to the resulting draft, used for SEO purpose.
   """

@@ -5,9 +5,9 @@ import { PublicationFragment } from '../generated/graphql';
 
 const getPublicationLogo = (publication: PublicationFragment, isSidebar?: boolean) => {
 	if (isSidebar) {
-		return publication.preferences.logo; // Always display light mode logo in sidebar
+		return "https://www.headsupb2b.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-light.ab90079a.png&w=640&q=75"; // Always display light mode logo in sidebar
 	}
-	return publication.preferences.darkMode?.logo || publication.preferences.logo;
+	return "https://www.headsupb2b.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-light.ab90079a.png&w=640&q=75";
 }
 
 export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
@@ -15,7 +15,7 @@ export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
 	const PUBLICATION_LOGO = getPublicationLogo(publication, isSidebar);
 
 	return (
-		<h1 className="relative w-full">
+		<h1 className="ml:ml-5 relative w-full">
 			<Link
 				href={'/'}
 				aria-label={`${publication.title} blog home page`}
@@ -24,11 +24,11 @@ export const PublicationLogo = ({ isSidebar }: { isSidebar?: boolean }) => {
 				{PUBLICATION_LOGO ? (
 					<>
 						<img
-							className="block w-32 shrink-0 md:w-40"
+							className="block l: w-32 shrink-0 md:w-40"
 							alt={publication.title}
 							src={resizeImage(PUBLICATION_LOGO, { w: 320, h: 80 })}
 						/>
-						<span className="text-2xl font-semibold text-white md:text-3xl">Blog</span>
+						<span className="text-2xl font-semibold text-white md:text-3xl">Blogs</span>
 					</>
 				) : (
 					<span

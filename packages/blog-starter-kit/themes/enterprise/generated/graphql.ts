@@ -765,7 +765,7 @@ export type CreateDraftInput = {
    * The id of the user who owns the draft. When this field is supplied, the draft is created directly under that user's account.
    * Only applicable for team publications.
    */
-  draftOwner?: InputMaybe<Scalars['ObjectId']['input']>;
+  draftOwner?: InputMaybe<Scalars['ID']['input']>;
   /** Information about the meta tags added to the resulting draft, used for SEO purpose. */
   metaTags?: InputMaybe<MetaTagsInput>;
   /** The URL of the original article if the draft is imported from an external source. */

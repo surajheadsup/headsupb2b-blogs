@@ -7,6 +7,7 @@ import { useAppContext } from './contexts/appContext';
 import CloseSVG from './icons/svgs/CloseSVG';
 import { PublicationLogo } from './publication-logo';
 import { SocialLinks } from './social-links';
+import FollowUs from './headupb2bComponents/FollowUs';
 
 type Props = {
 	toggleSidebar: () => void;
@@ -95,7 +96,9 @@ function PublicationSidebar(props: Props) {
 								Blog socials
 							</h2>
 						)}
-						<SocialLinks isSidebar />
+						{/* <FollowUs color="black"/> */}
+						<SocialLinks isSidebar={true} />
+						
 					</div>
 				</DialogPrimitive.Content>
 			</DialogPrimitive.Portal>
